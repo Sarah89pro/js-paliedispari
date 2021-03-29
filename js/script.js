@@ -21,10 +21,16 @@ for (var i = 0; i < 1; i++) { //genera un numero random una volta sola
 }
 
 
-//somma i valori ottenuti
+//somma i valori ottenuti (in questo caso il numero generato dal computer + quello scelto dal giocatore)
 var sum = sum (evenOddUser, newNumber);
 console.log(sum);
 
+//controlla se il valore ottenuto dalla somma è pari o dispari
+var finalResult = EvenOdd (sum);
+console.log(EvenOdd);
+
+
+//UTILITY
 
 //funzione per ottenere numero random
 function randomNumberComputer (min, max) {
@@ -33,29 +39,22 @@ function randomNumberComputer (min, max) {
 }
 
 
-//funzione per sommare (in questo caso il numero generato dal computer + quello scelto dal giocatore)
+//funzione per sommare 
 function sum(num1, num2) {
     var result = num1 + num2;
     return result;
 }
 
 
-
-
-
-
-//funzione per controllare se i valori sono pari o dispari
-//function EvenOdd 
-
-
-
-
-/*function EvenOdd (number) {
-    if (number %2 === 0) {
-        return "pari";
+//funzione per controllare se un valore è pari o dispari
+function EvenOdd (number) {
+    if (number % 2 !== 0) {
+        return "dispari";
     }
-    return "dispari";
-}*/
+    return "pari";
+}
+
+
 
 
 
