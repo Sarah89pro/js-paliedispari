@@ -8,7 +8,7 @@ Pari e Dispari
 
 
 //chiedi all'utente di scegliere fra pari e dispari
-var choice = prompt("Quale numero sceglieresti?\nPari?\nO dispari?").toLowerCase().trim();
+var choice = prompt("Scegli:\nPari?\nO\nDispari?").toLowerCase().trim();
 
 while (choice != "pari" && choice != "dispari") {
     choice = prompt("Per favore, scegli: 'pari' o 'dispari'");
@@ -22,8 +22,6 @@ var evenOddUser = parseInt(prompt("Inseriscine uno fra 1 e 5"));
 while (evenOddUser <= 0 || evenOddUser > 5) {
     evenOddUser = parseInt(prompt("Ora scegli un numero da 1 a 5"));
     }
-
-console.log(evenOddUser); 
 
 //validazione stringa e numero inserito
 if ((choice === "pari") && (evenOddUser %2 !== 0)) {
