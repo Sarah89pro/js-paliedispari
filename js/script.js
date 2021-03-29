@@ -27,7 +27,8 @@ console.log(sum);
 
 //controlla se il valore ottenuto dalla somma è pari o dispari
 var finalResult = EvenOdd (sum);
-console.log(EvenOdd);
+console.log(finalResult);
+
 
 
 //UTILITY
