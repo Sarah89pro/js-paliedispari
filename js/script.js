@@ -7,17 +7,28 @@ Pari e Dispari
 -Dichiariamo chi ha vinto.*/
 
 
+//chiedi all'utente di scegliere fra pari e dispari
+var choice = prompt("Quale numero sceglieresti?\nPari?\nO dispari?").toLowerCase().trim();
+
+while (choice != "pari" && choice != "dispari") {
+    choice = prompt("Per favore, scegli: 'pari' o 'dispari'");
+    }
+
+console.log(choice);
 
 //chiedi all'utente di scegliere un numero, in un range da 1 a 5
-var evenOddUser = parseInt(prompt("Quale numero sceglieresti?\nPari?\nO dispari?\nInseriscine uno fra 1 e 5"));
+var evenOddUser = parseInt(prompt("Inseriscine uno fra 1 e 5"));
+
+while (evenOddUser <= 0 || evenOddUser > 5) {
+    evenOddUser = parseInt(prompt("Ora scegli un numero da 1 a 5"));
+    }
+
 console.log(evenOddUser); 
 
 //generare numero random per computer
 for (var i = 0; i < 1; i++) { //genera un numero random una volta sola
     var newNumber = randomNumberComputer (1, 5); //con un valore compreso fra 1 e 5
     console.log(newNumber);
-    //var sum = newNumber + evenOddUser;
-    //console.log(sum);
 }
 
 
@@ -27,10 +38,24 @@ console.log(sum);
 
 //controlla se il valore ottenuto dalla somma è pari o dispari
 var finalResult = EvenOdd (sum);
-console.log(finalResult);
+console.log("la somma è " + finalResult);
+
+//stabilisci il vincitore
+if (sum % 2 == 0) {
+    var victory = "pari";
+  } else {
+    var victory = "dispari";
+  }
 
 
+  if (choice == victory) {
+   console.log ("hai vinto");
+  } else {
+    console.log ("hai perso");
+  }
 
+
+  
 //UTILITY
 
 //funzione per ottenere numero random
@@ -50,6 +75,7 @@ function sum(num1, num2) {
 //funzione per controllare se un valore è pari o dispari
 function EvenOdd (number) {
     if (number % 2 !== 0) {
+        console.log()
         return "dispari";
     }
     return "pari";
