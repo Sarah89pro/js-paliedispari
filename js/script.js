@@ -6,8 +6,11 @@ Pari e Dispari
 -Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 -Dichiariamo chi ha vinto.*/
 
+
+
+//chiedi all'utente di scegliere un numero, in un range da 1 a 5
 var evenOddUser = parseInt(prompt("Quale numero sceglieresti?\nPari?\nO dispari?\nInseriscine uno fra 1 e 5"));
-console.log(evenOddUser);
+console.log(evenOddUser); 
 
 //generare numero random per computer
 for (var i = 0; i < 1; i++) { //genera un numero random una volta sola
@@ -18,12 +21,23 @@ for (var i = 0; i < 1; i++) { //genera un numero random una volta sola
 }
 
 
-//funzione per numero ottenere numero random
+//somma i valori ottenuti
+var sum = sum (evenOddUser, newNumber);
+console.log(sum);
+
+
+//funzione per ottenere numero random
 function randomNumberComputer (min, max) {
     var random = Math.floor(Math.random() * (max - min + 1) ) + min;
     return random;
 }
-//funzione per sommare il numero generato dal computer con quello scelto dal giocatore
+
+
+//funzione per sommare (in questo caso il numero generato dal computer + quello scelto dal giocatore)
+function sum(num1, num2) {
+    var result = num1 + num2;
+    return result;
+}
 
 
 
