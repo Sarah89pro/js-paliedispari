@@ -25,6 +25,20 @@ while (evenOddUser <= 0 || evenOddUser > 5) {
 
 console.log(evenOddUser); 
 
+//validazione stringa e numero inserito
+if ((choice === "pari") && (evenOddUser %2 !== 0)) {
+  evenOddUser = parseInt(prompt("Hai scelto pari, devi inserire un numero pari!"));
+  console.log(evenOddUser);
+}
+else if ((choice === "dispari") && (evenOddUser %2 === 0)) {
+  evenOddUser = parseInt(prompt("Hai scelto dispari, devi inserire un numero dipari!"));
+  console.log(evenOddUser);
+}
+else {
+  console.log (evenOddUser);
+}
+
+
 //generare numero random per computer
 for (var i = 0; i < 1; i++) { //genera un numero random una volta sola
     var newNumber = randomNumberComputer (1, 5); //con un valore compreso fra 1 e 5
@@ -56,8 +70,10 @@ if (sum % 2 == 0) {
 
 
   
-//UTILITY
-
+/*****
+ * UTILITY
+*********/
+ 
 //funzione per ottenere numero random
 function randomNumberComputer (min, max) {
     var random = Math.floor(Math.random() * (max - min + 1) ) + min;
