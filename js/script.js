@@ -38,10 +38,8 @@ else {
 
 
 //generare numero random per computer
-for (var i = 0; i < 1; i++) { //genera un numero random una volta sola
-    var newNumber = randomNumberComputer (1, 5); //con un valore compreso fra 1 e 5
-    console.log(newNumber);
-}
+var newNumber = randomNumberComputer (1, 5); //genera un numero random con un valore compreso fra 1 e 5
+console.log(newNumber);
 
 
 //somma i valori ottenuti (in questo caso il numero generato dal computer + quello scelto dal giocatore)
