@@ -52,17 +52,19 @@ console.log("la somma è " + finalResult);
 
 //stabilisci il vincitore
 if (sum % 2 == 0) {
-    var victory = "pari";
+  var victory = "pari";
+
   } else {
-    var victory = "dispari";
-  }
+  var victory = "dispari";
+}
 
 
-  if (choice == victory) {
-   console.log ("hai vinto");
+if (choice == victory) {
+  console.log ("hai vinto");
+
   } else {
-    console.log ("hai perso");
-  }
+  console.log ("hai perso");
+}
 
 
   
